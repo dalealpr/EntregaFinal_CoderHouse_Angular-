@@ -1,0 +1,21 @@
+
+.toolbar{
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px; 
+   }
+
+   .btnSesion{
+    width: max-content;
+    border-radius: 28px;
+    border: 1px solid white;
+    font-size: 14px;
+    margin-right: 20px;
+   }
+
+   
+   .btnSesion:hover{
+    color:#07f162 ;
+    border: 1px solid #07f162;
+   }

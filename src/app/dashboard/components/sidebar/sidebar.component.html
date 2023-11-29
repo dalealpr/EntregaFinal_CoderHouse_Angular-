@@ -1,0 +1,69 @@
+<div class="sidebarCont">
+  <div class="contUser">
+    <p class="pUser">Bienvenido {{ fullName$ | async }}</p>
+    <p class="pUser">
+      {{ email$ | async }}
+    </p>
+  </div>
+  <mat-nav-list>
+    <!-- Optimizar con un ngFor -->
+    <mat-list-item
+      class="listItem"
+      routerLinkActive
+      #homeLink="routerLinkActive"
+      routerLink="home"
+      [activated]="homeLink.isActive"
+    >
+      <a matListItemTitle class="item">
+        <mat-icon class="icon" fontIcon="home"></mat-icon>Home</a
+      >
+    </mat-list-item>
+    <mat-list-item
+      *ngIf="(userRole$ | async) === 'ADMIN'"
+      class="listItem"
+      routerLinkActive
+      #usuariosLink="routerLinkActive"
+      routerLink="usuarios"
+      [activated]="usuariosLink.isActive"
+    >
+      <a matListItemTitle class="item"
+        ><mat-icon class="icon" fontIcon="person"></mat-icon>Usuarios</a
+      >
+    </mat-list-item>
+    <mat-list-item
+      class="listItem"
+      routerLinkActive
+      #jugadoresLink="routerLinkActive"
+      routerLink="jugadores"
+      [activated]="jugadoresLink.isActive"
+    >
+      <a matListItemTitle class="item"
+        ><mat-icon class="icon" fontIcon="sports_soccer"></mat-icon>Jugadores</a
+      >
+    </mat-list-item>
+    <mat-list-item
+      class="listItem"
+      routerLink="equipos"
+      routerLinkActive
+      #equiposLink="routerLinkActive"
+      [activated]="equiposLink.isActive"
+    >
+      <a matListItemTitle class="item"
+        ><mat-icon class="icon" fontIcon="groups"></mat-icon>Equipos</a
+      >
+    </mat-list-item>
+
+    <mat-list-item
+      class="listItem"
+      routerLink="enrollments"
+      routerLinkActive
+      #enrollmentsLink="routerLinkActive"
+      [activated]="enrollmentsLink.isActive"
+    >
+      <a matListItemTitle class="item"
+        ><mat-icon class="icon" fontIcon="person_add"></mat-icon
+        >Inscripciones</a
+      >
+    </mat-list-item>
+  </mat-nav-list>
+</div>
