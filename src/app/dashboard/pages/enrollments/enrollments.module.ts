@@ -8,9 +8,10 @@ import { EnrollmentsTableComponent } from './components/enrollments-table/enroll
 import { EnrollmentsComponent } from './enrollments.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { enrollmentFeature } from './store/enrollment.reducer';
+import { EnrollmentDialogComponent } from './componets/enrollment-dialog/enrollment-dialog.component';
 
 @NgModule({
-  declarations: [EnrollmentsComponent, EnrollmentsTableComponent],
+  declarations: [EnrollmentsComponent, EnrollmentsTableComponent, EnrollmentDialogComponent],
   imports: [
     CommonModule,
     SharedModule,

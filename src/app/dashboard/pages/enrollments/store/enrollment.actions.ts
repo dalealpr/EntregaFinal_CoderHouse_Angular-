@@ -7,5 +7,6 @@ export const EnrollmentActions = createActionGroup({
     'Load Enrollments': emptyProps(),
     'Load Enrollments Success': props<{ data: Enrollment[] }>(),
     'Load Enrollments Failure': props<{ error: unknown }>(),
+    'Load Enrollments Dialog Options': emptyProps(),
   },
 });

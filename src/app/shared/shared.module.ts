@@ -13,6 +13,7 @@ import { FormErrorPipe } from './pipes/form-error.pipe';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 import { RouterModule } from '@angular/router';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [FullnamePipe, HeadlineDirective, FormErrorPipe],
@@ -32,6 +33,7 @@ import { RouterModule } from '@angular/router';
     FormErrorPipe,
     RouterModule,
     MatCardModule,
+    MatSelectModule,
   ],
 })
 export class SharedModule {}

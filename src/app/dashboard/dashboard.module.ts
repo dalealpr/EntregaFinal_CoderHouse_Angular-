@@ -14,6 +14,7 @@ import { SharedModule } from '../shared/shared.module';
 import { HomeModule } from './pages/home/home.module';
 import { EnrollmentsModule } from './pages/enrollments/enrollments.module';
 import { DashboardRoutingModule } from './dashboard-routing.module';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [DashboardComponent, ToolbarComponent, SidebarComponent],
@@ -31,6 +32,7 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
     HomeModule,
     // EquiposModule,
     EnrollmentsModule,
+    MatSelectModule,
   ],
   exports: [DashboardComponent],
 })

@@ -3,6 +3,8 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { Enrollment } from '../../interface/enrollment';
 import { selectEnrollments } from '../../store/enrollment.selectors';
+import { MatDialog } from '@angular/material/dialog';
+import { EnrollmentDialogComponent } from '../../componets/enrollment-dialog/enrollment-dialog.component';
 
 @Component({
   selector: 'app-enrollments-table',

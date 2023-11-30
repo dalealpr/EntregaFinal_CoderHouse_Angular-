@@ -1,0 +1,13 @@
+.formCont{
+display: flex;
+padding: 20px;
+justify-content: space-between;
+
+    .contInput{
+        width: 270px;
+
+        .formFCont{
+            width: 100%;
+        }
+    }
+}

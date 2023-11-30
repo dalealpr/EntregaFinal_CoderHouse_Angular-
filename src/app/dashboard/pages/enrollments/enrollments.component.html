@@ -1,1 +1,15 @@
-<app-enrollments-table></app-enrollments-table>
+<div class="contEnrrol">
+  <h2 class="title">INSCRIPCIONES</h2>
+
+  <button
+    class="btnAdd"
+    mat-flat-button
+    (click)="addEnrollment()"
+    color="primary"
+  >
+    <mat-icon>add</mat-icon>
+    Agregar Equipo
+  </button>
+
+  <app-enrollments-table></app-enrollments-table>
+</div>
