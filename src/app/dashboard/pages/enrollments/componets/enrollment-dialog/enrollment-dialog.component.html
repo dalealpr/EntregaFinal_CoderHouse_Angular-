@@ -1,20 +1,46 @@
 <div mat-dialog-content>
+  <h1 mat-dialog-title style="text-align: center; font-size: 27px" class="mb-4">
+    Crear inscripción
+  </h1>
+
   <form class="formCont">
     <div class="contInput">
       <mat-form-field class="formFCont">
         <mat-label>Equipo</mat-label>
-        <mat-select>
-          <mat-option></mat-option>
+        <mat-select [formControl]="equipoIdControl">
+          <mat-option
+            [value]="equipo.nombre"
+            *ngFor="let equipo of equipoOptions$ | async"
+            >{{ equipo.nombre }}</mat-option
+          >
         </mat-select>
       </mat-form-field>
     </div>
     <div class="contInput">
       <mat-form-field class="formFCont">
         <mat-label>Jugador</mat-label>
-        <mat-select>
-          <mat-option></mat-option>
+        <mat-select [formControl]="jugadorIdControl">
+          <mat-option
+            [value]="jugador.nombre"
+            *ngFor="let jugador of jugadorOptions$ | async"
+            >{{ jugador.nombre }} {{ jugador.apellido }}</mat-option
+          >
         </mat-select>
       </mat-form-field>
     </div>
   </form>
+
+  {{ enrollmentForm.value | json }}
+
+  <div mat-dialog-actions class="btnCont">
+    <button
+      class="btnDialog"
+      mat-dialog-close
+      (click)="closeDialog()"
+      mat-button
+    >
+      Cancelar
+    </button>
+    <button class="btnDialog" (click)="obSubmit()" mat-button>Guardar</button>
+  </div>
 </div>

@@ -12,4 +12,29 @@
     border-bottom: 4px solid #08f36a;
 }
 
+.contText{
+    color: white;
+}
+
+}
+
+.contBtns{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+
+    .contbtn{
+        width:20%;
+        height: 170px;
+        border: 1px solid #ffffff ;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .contbtn:hover{
+        border: 4px solid #00ff6a ;
+    }
+
+
 }

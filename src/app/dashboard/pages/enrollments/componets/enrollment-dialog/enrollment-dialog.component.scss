@@ -8,6 +8,25 @@ justify-content: space-between;
 
         .formFCont{
             width: 100%;
+
+            }
         }
     }
-}
+
+    .btnCont{
+        margin-top: 85px;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        gap: 20px;
+
+        .btnDialog{
+            width: 120px;
+            height: 42px;
+            background-color: var(--primary);
+            color: black;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+    }

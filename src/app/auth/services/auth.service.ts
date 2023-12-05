@@ -35,15 +35,16 @@ export class AuthService {
       )
       .subscribe({
         next: (response) => {
-          if (!response.length) {
+          const authUser = response[0];
+          if (!authUser) {
             this.notifService.showErrorNotif(
               'Error al iniciar sesión',
               `Sus credenciales no son válidas`
             );
             console.log('Error inicio de sesion');
+          } else if (authUser?.role === 'EMPLOYEE') {
+            alert('No tienes permiso para acceder');
           } else {
-            const authUser = response[0];
-
             this.handleAuthUser(authUser);
 
             this.router.navigate(['dashboard/home']);

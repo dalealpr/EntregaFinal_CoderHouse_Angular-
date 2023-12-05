@@ -80,10 +80,14 @@
   ],
   "enrollments": [
     {
-      "id": 1,
-      "playerId": 1,
-      "equipoId": 4,
-      "userId": 6
+      "equipoId": "Manchester City",
+      "jugadorId": "Cristiano Ronaldo",
+      "id": 1
+    },
+    {
+      "equipoId": "Barcelona",
+      "jugadorId": "Cristiano Ronaldo",
+      "id": 2
     }
   ]
 }

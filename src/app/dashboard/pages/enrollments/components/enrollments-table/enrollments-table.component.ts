@@ -18,5 +18,7 @@ export class EnrollmentsTableComponent {
 
   constructor(private store: Store) {
     this.enrollments$ = this.store.select(selectEnrollments);
+
+    this.enrollments$.subscribe((e) => console.log(e));
   }
 }
